@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y wget unzip
 RUN addgroup --gid 1000 minecraft
 RUN adduser --disabled-password --home=/data --uid 1000 --gid 1000 --gecos "minecraft user" minecraft
 
+VOLUME /srv
+
 COPY entry.sh /srv/entry.sh
 
 WORKDIR /srv
