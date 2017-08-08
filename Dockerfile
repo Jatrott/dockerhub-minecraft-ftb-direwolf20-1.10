@@ -1,6 +1,6 @@
 # This is based on itzg/minecraft-server
 
-FROM java:8
+FROM openjdk:8-jre
 
 LABEL org.freenas.interactive="false" 		\
       org.freenas.version="Latest (Auto Update)"		\
