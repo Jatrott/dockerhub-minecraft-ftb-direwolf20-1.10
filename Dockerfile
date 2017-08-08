@@ -2,6 +2,36 @@
 
 FROM java:8
 
+LABEL org.freenas.interactive="false" 		\
+      org.freenas.version="Latest (Auto Update)"		\
+      org.freenas.upgradeable="true"		\
+      org.freenas.expose-ports-at-host="true"	\
+      org.freenas.autostart="true"		\
+      org.freenas.port-mappings="25565:25565/tcp"			\
+      org.freenas.volumes="[					\
+          {							\
+              \"name\": \"/data\",				\
+              \"descr\": \"Minecraft server directory\"		\
+          }							\
+      ]"							\
+      org.freenas.settings="[ 					\
+          {							\
+              \"env\": \"MOTD\",					\
+              \"descr\": \"Server Message of the Day\",		\
+              \"optional\": true				\
+          },							\
+          {							\
+              \"env\": \"JVM_OPTS\",			\
+              \"descr\": \"-Xms4096m -Xmx4096m\",	\
+              \"optional\": true				\
+          },							\
+          {							\
+              \"env\": \"LEVEL\",			\
+              \"descr\": \"world\",			\
+              \"optional\": true				\
+          } 							\
+      ]"
+
 MAINTAINER Dylan Kauling <gunsmithy@gmail.com>
 
 RUN apt-get update && apt-get install -y wget unzip
