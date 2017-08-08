@@ -8,8 +8,6 @@ RUN apt-get update && apt-get install -y wget unzip
 RUN addgroup --gid 1000 minecraft
 RUN adduser --disabled-password --home=/data --uid 1000 --gid 1000 --gecos "minecraft user" minecraft
 
-VOLUME /srv
-
 COPY entry.sh /srv/entry.sh
 
 WORKDIR /srv
@@ -25,5 +23,7 @@ RUN wget -c  https://www.feed-the-beast.com/projects/ftb-presents-direwolf20-1-1
 USER minecraft
 
 EXPOSE 25565
+
+VOLUME ["/srv/world"]
 
 CMD ["/bin/bash","entry.sh"]
