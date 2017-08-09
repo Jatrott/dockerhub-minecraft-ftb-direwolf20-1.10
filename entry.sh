@@ -43,4 +43,12 @@ if [ ! -f server.properties ] ; then
 	EOF
 fi
 
+if [ ! -f ops.json ] ; then
+	cat <<- EOF > ops.json
+	# Minecraft server operators
+	# ---
+	Gunsmithy
+	EOF
+fi
+
 ./ServerStart.sh
