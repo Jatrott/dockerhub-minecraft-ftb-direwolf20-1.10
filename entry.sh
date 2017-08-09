@@ -45,7 +45,13 @@ fi
 
 if [ ! -f ops.json ] ; then
 	cat <<- EOF > ops.json
-	Gunsmithy
+	[
+	{
+	"uuid": "f75096c1-f370-4104-b79a-7b1bd4634bf1",
+	"name": "Gunsmithy",
+	"level": 4
+	}
+	]
 	EOF
 fi
 
