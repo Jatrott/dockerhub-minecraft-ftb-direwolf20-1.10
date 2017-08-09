@@ -45,8 +45,6 @@ fi
 
 if [ ! -f ops.json ] ; then
 	cat <<- EOF > ops.json
-	# Minecraft server operators
-	# ---
 	Gunsmithy
 	EOF
 fi
