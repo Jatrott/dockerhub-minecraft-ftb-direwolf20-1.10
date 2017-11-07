@@ -1,8 +1,9 @@
 # This is based on itzg/minecraft-server
+# forked from gunsmithy/ftb-direwolf20-1.10
 
 FROM openjdk:8-jre
 
-MAINTAINER Dylan Kauling <gunsmithy@gmail.com>
+MAINTAINER James Trott
 
 RUN apt-get update && apt-get install -y wget unzip
 
