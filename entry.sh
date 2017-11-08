@@ -47,8 +47,8 @@ if [ ! -f ops.json ] ; then
 	cat <<- EOF > ops.json
 	[
 	{
-	"uuid": "f75096c1-f370-4104-b79a-7b1bd4634bf1",
-	"name": "Gunsmithy",
+	"uuid": "2b84776a-bb55-4262-9968-309515e61c94",
+	"name": "jatrott",
 	"level": 4
 	}
 	]
